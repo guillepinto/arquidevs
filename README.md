@@ -1,7 +1,7 @@
 <h1 align="center">ARQUIDEVS 👨🏻‍🏭</h1>
 <p align="center">Grupo Arquitectura de Computadores</p>
 <p align="center">
-   <img width="350" src="https://github.com/Majinka10/arquidevs/blob/main/images/principal.jpg" alt="ARQUIDEVS">
+   <img width="350" src="https://github.com/Majinka10/arquidevs/blob/main/images/principal.png" alt="ARQUIDEVS">
 </p>
  
 ## Integrantes
