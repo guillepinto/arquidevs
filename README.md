@@ -14,4 +14,4 @@
 
 ## Practicas
 
-- [Practica 1](projects/01)
+- [Práctica 1](projects/01)
