@@ -4,8 +4,8 @@ Este proyecto se centra en la construcción de una serie de chips que desempeña
 ### Objetivo del proyecto
 El objetivo principal de este proyecto es implementar todos los chips presentados en este capítulo. Estos chips son esenciales para el funcionamiento de la computadora y forman la base de las operaciones aritméticas y lógicas que la CPU puede llevar a cabo. La única limitación es que solo podemos utilizar los chips que hemos construido gradualmente en proyectos anteriores y los chips estándar proporcionados en el entorno del curso.
 
-###Desarrollo del proyecto
-1. Comenzamos revisando la teoría y luego procedimos a codificar los archivos .hdl de cada chip en un editor de texto. 
+### Desarrollo del proyecto
+1. Comenzamos realizando un estudio de la teoría y luego procedimos a codificar los archivos .hdl de cada chip en un editor de texto. 
 
 2. **Construcción del HalfAdder**: El primer chip que construimos fue el HalfAdder. Nos basamos en su tabla de verdad para implementarlo. Este chip fue relativamente sencillo de construir ya que la tabla de verdad para el bit de acarreo es idéntica a la compuerta lógica AND y la tabla de verdad para la suma es idéntica a la compuerta lógica XOR.
 
@@ -17,11 +17,11 @@ El objetivo principal de este proyecto es implementar todos los chips presentado
 
 6. **Construcción de la ALU**: La construcción de la ALU fue más compleja: 
 
--Primero, se utilizó un multiplexor para elegir entre x y un valor constante de cero en función de la señal zx. Luego, se negó la salida de este multiplexor para obtener x o !x según la señal nx. El mismo proceso se repitió para la entrada y, utilizando zy y ny. 
--Luego, utilizamos un Adder de 16 bits para realizar la suma de x y y, y un AND de 16 bits para calcular la operación lógica AND entre x y y. Dependiendo de la señal f, seleccionamos entre la suma y la operación AND. 
+- Primero, se utilizó un multiplexor para elegir entre x y un valor constante de cero en función de la señal zx. Luego, se negó la salida de este multiplexor para obtener x o !x según la señal nx. El mismo proceso se repitió para la entrada y, utilizando zy y ny. 
+- Luego, utilizamos un Adder de 16 bits para realizar la suma de x y y, y un AND de 16 bits para calcular la operación lógica AND entre x y y. Dependiendo de la señal f, seleccionamos entre la suma y la operación AND. 
 -Posteriormente, negamos el resultado, utilizando otro multiplexor, según la señal no. Para calcular la salida zr tuvimos que constriuir un chip Or16Way a partir de dos Or8Way y un OR, el propósito de Or16Way es recorrer cada uno de los bits en esta salida y verificar si alguno de ellos es igual a 1. Si al menos un bit es 1, significa que la salida no es igual a cero, y zr se establece en 0. 
--Casi para terminar, determinamos el bit ng (negativo) tomando el bit más significativo de la salida, esto se logró con una And16 de cuya salida solo nos interesa el bit en la posición 15.
--Finalmente, para conectar la salida, utilizamos una compuerta OR de 16 bits que simplemente recibe el vector que devuelve el multiplexor de ‘no’ y como segundo parametro ingresamos un vector de ceros, se hace la operación lógica, que da como resultado la misma función que entró, y se iguala a la salida ‘out’.
+- Casi para terminar, determinamos el bit ng (negativo) tomando el bit más significativo de la salida, esto se logró con una And16 de cuya salida solo nos interesa el bit en la posición 15.
+- Finalmente, para conectar la salida, utilizamos una compuerta OR de 16 bits que simplemente recibe el vector que devuelve el multiplexor de ‘no’ y como segundo parametro ingresamos un vector de ceros, se hace la operación lógica, que da como resultado la misma función que entró, y se iguala a la salida ‘out’.
 
 ### Herramientas y recursos
 Para completar este proyecto, requerimos de las siguientes herramientas y recursos:
