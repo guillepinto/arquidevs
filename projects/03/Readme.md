@@ -19,7 +19,7 @@ El objetivo principal de este proyecto es diseñar e implementar una memoria RAM
 
     La construcción del chip `RAM8` implicó el uso de un demultiplexor de 1 a 8 para seleccionar el registro de destino en función de la dirección proporcionada. Cada uno de los 8 registros se conecta a un chip `Register`, y solo se escribirán los datos en el registro seleccionado si la señal `load` es 1. Para la salida, cada registro ingresa a cada una de las entradas del chip `Mux8Way16` que, dependiendo de address, devuelve el valor que esté en el registro escogido en la salida ‘out’. Esta estructura permite la escritura selectiva en un registro específico mientras se mantiene el contenido de los demás registros.
 
-6. **Expansión a RAM64, RAM512 y RAM4K**
+6. **Expansión a RAM64, RAM512, RAM4K y RAM16K**
 
     El enfoque para construir memorias más grandes, como `RAM64`, `RAM512`, `RAM4K` y `RAM16K` es escalable. Explicaremos cómo se realizó la RAM64 como ejemplo:
 
