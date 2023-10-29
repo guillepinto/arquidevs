@@ -14,7 +14,7 @@ El objetivo principal de este proyecto es construir una plataforma de computador
 
 Implementamos un chip Memory para gestionar el acceso a las memorias RAM. Este chip se encarga de enrutar las operaciones de lectura y escritura a la memoria adecuada según la dirección proporcionada. Además, se utilizan componentes como `DMux`, `RAM16K`, `Screen`, y `Keyboard` para lograr la funcionalidad necesaria. 
 
-1.**Implementación del chip CPU**
+2.**Implementación del chip CPU**
 
 La Unidad Central de Procesamiento (CPU). Consiste en una ALU y un conjunto de registros diseñados para obtener y ejecutar instrucciones escritas en el lenguaje de máquina Hack. En particular, la ALU ejecuta la instrucción ingresada de acuerdo con las especificaciones del lenguaje de máquina Hack. La Unidad Central de Procesamiento se puede construir a partir de la ALU construida en el proyecto 2, los chips de Registro y PC construidos en el proyecto 3, y las puertas lógicas construidas en el proyecto 1.
 
