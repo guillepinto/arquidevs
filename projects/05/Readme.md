@@ -18,6 +18,10 @@ Implementamos un chip Memory para gestionar el acceso a las memorias RAM. Este c
 
 La Unidad Central de Procesamiento (CPU). Consiste en una ALU y un conjunto de registros diseñados para obtener y ejecutar instrucciones escritas en el lenguaje de máquina Hack. En particular, la ALU ejecuta la instrucción ingresada de acuerdo con las especificaciones del lenguaje de máquina Hack. La Unidad Central de Procesamiento se puede construir a partir de la ALU construida en el proyecto 2, los chips de Registro y PC construidos en el proyecto 3, y las puertas lógicas construidas en el proyecto 1.
 
+3.**Implementación del COMPUTER**
+
+El archivo Computer.hdl representa la computadora HACK completa, incluyendo su CPU, ROM y RAM. Es el componente básico de la arquitectura de la computadora HACK y permite la ejecución de programas en código de máquina. Cuando la entrada reset se establece en 0, el programa almacenado en la ROM de la computadora comienza su ejecución y cuando la entrada reset se establece en 1, la ejecución del programa se reinicia.
+
 ### Herramientas y recursos
 
 Para completar este proyecto, se utilizaron las siguientes herramientas y recursos:
