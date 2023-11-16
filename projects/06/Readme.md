@@ -12,29 +12,17 @@ El objetivo principal es cargar un archivo Prog.asm que contenga un programa vá
 
 Nuestra implementación del ensamblador se realizó en Python. A continuación se detalla el proceso paso a paso:
 
-1. **Lectura del archivo .asm**
+1. **Lectura del archivo .asm**: Abrimos y leemos el archivo .asm que contiene el código escrito en lenguaje ensamblador Hack. Durante esta fase, eliminamos los comentarios y los espacios en blanco innecesarios para obtener los comandos ejecutables del programa.
 
-Abrimos y leemos el archivo .asm que contiene el código escrito en lenguaje ensamblador Hack. Durante esta fase, eliminamos los comentarios y los espacios en blanco innecesarios para obtener los comandos ejecutables del programa.
+2. **Generación de la tabla de símbolos**: Identificamos y asignamos direcciones de memoria a etiquetas y variables presentes en el código ensamblador. Esto permite referenciar estas ubicaciones en el código y traducirlas adecuadamente.
 
-2. **Generación de la tabla de símbolos**
+3. **Preparación del código para traducción**: Eliminamos las etiquetas del código, ya que no tienen una representación directa en código de máquina. Esto involucra detectar y eliminar las instrucciones asociadas a estas etiquetas para preparar el código para la traducción.
 
-Identificamos y asignamos direcciones de memoria a etiquetas y variables presentes en el código ensamblador. Esto permite referenciar estas ubicaciones en el código y traducirlas adecuadamente.
+4. **Asignación de direcciones a variables**: Asignamos direcciones de memoria a las variables no etiquetadas. Comenzamos desde la dirección 16, ya que las primeras 16 direcciones están reservadas para registros predefinidos y hardware específico del Hack.
 
-3. **Preparación del código para traducción**
+5. **Traducción de código a binario**: Para cada instrucción del código ensamblador Hack, la traducimos a su equivalente en código binario. Esto implica mapear cada tipo de instrucción (A-instrucciones, C-instrucciones) según las especificaciones de la arquitectura del Hack.
 
-Eliminamos las etiquetas del código, ya que no tienen una representación directa en código de máquina. Esto involucra detectar y eliminar las instrucciones asociadas a estas etiquetas para preparar el código para la traducción.
-
-4. **Asignación de direcciones a variables**
-
-Asignamos direcciones de memoria a las variables no etiquetadas. Comenzamos desde la dirección 16, ya que las primeras 16 direcciones están reservadas para registros predefinidos y hardware específico del Hack.
-
-5. **Traducción de código a binario**
-
-Para cada instrucción del código ensamblador Hack, la traducimos a su equivalente en código binario. Esto implica mapear cada tipo de instrucción (A-instrucciones, C-instrucciones) según las especificaciones de la arquitectura del Hack.
-
-6. **Generación del archivo .hack**
-
-Escribimos las instrucciones traducidas en un archivo .hack, que contendrá el código binario correspondiente al código ensamblador original.
+6. **Generación del archivo .hack**: Escribimos las instrucciones traducidas en un archivo .hack, que contendrá el código binario correspondiente al código ensamblador original.
 
 
 ### Herramientas y recursos
