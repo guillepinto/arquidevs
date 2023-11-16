@@ -16,7 +16,7 @@ Nuestra implementación del ensamblador se realizó en Python. A continuación s
 
 Abrimos y leemos el archivo .asm que contiene el código escrito en lenguaje ensamblador Hack. Durante esta fase, eliminamos los comentarios y los espacios en blanco innecesarios para obtener los comandos ejecutables del programa.
 
-2. **IGeneración de la tabla de símbolos**
+2. **Generación de la tabla de símbolos**
 
 Identificamos y asignamos direcciones de memoria a etiquetas y variables presentes en el código ensamblador. Esto permite referenciar estas ubicaciones en el código y traducirlas adecuadamente.
 
