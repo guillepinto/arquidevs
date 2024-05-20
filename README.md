@@ -19,3 +19,4 @@
 - [Práctica 3](projects/03)
 - [Práctica 4](projects/04)
 - [Práctica 5](projects/05)
+- [Práctica 6](projects/06)
